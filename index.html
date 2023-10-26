@@ -14,63 +14,80 @@
 
         <button class="empezarJuego" onclick ='EmpezarJuego();'>Empezar Partida</button>
 
-        <div class="PiezasJ1">
-            <div class="item"><img src="./Recursos/cero.png" id="0" name="c1" width="75" height ="72"></div>
-            <div class="item"><img src="./Recursos/uno.png" id="1" name="u1" width="75" height ="72" onclick ='moverMano(this);'></div>
-            <div class="item"><img src="./Recursos/dos.png" id="2" name="d1" width="75" height ="72" onclick ='moverMano(this);'></div>
+        <div class="Global">
+            <p id="rondaActual">Ronda Actual: </p>
+            <div class="PiezasJ1">
+                <div class="item"><img src="./Recursos/cero.png" id="0" name="c1" width="75" height ="72"></div>
+                <div class="item"><img src="./Recursos/uno.png" id="1" name="u1" width="75" height ="72" onclick ='moverManoJ1(this);'></div>
+                <div class="item"><img src="./Recursos/dos.png" id="2" name="d1" width="75" height ="72" onclick ='moverManoJ1(this);'></div>
+            
+                <div class="PiezasJ2">
+                    <img src="./Recursos/cero.png" id="3" name="c2" width="75" height ="72">
+                    <img src="./Recursos/uno.png" id="4" name="u2" width="75" height ="72" onclick ='moverManoJ2(this);'>
+                    <img src="./Recursos/dos.png" id="5" name="d2" width="75" height ="72" onclick ='moverManoJ2(this);'>
+                </div>
         
-            <div class="PiezasJ2">
-                <img src="./Recursos/cero.png" id="3" name="c2" width="75" height ="72">
-                <img src="./Recursos/uno.png" id="4" name="u2" width="75" height ="72" onclick ='moverMano(this);'>
-                <img src="./Recursos/dos.png" id="5" name="d2" width="75" height ="72" onclick ='moverMano(this);'>
+                <div class="PiezasJ3">
+                    <img src="./Recursos/cero.png" id="6" name="c3" width="75" height ="72">
+                    <img src="./Recursos/uno.png" id="7" name="u3" width="75" height ="72" onclick ='moverManoJ3(this);'>
+                    <img src="./Recursos/dos.png" id="8" name="d3" width="75" height ="72" onclick ='moverManoJ3(this);'>
+                </div>
             </div>
     
-            <div class="PiezasJ3">
-                <img src="./Recursos/cero.png" id="6" name="c3" width="75" height ="72">
-                <img src="./Recursos/uno.png" id="7" name="u3" width="75" height ="72" onclick ='moverMano(this);'>
-                <img src="./Recursos/dos.png" id="8" name="d3" width="75" height ="72" onclick ='moverMano(this);'>
+            </br></br>
+    
+            <div class="Manos">
+                <img src="./Recursos/Interrogante.jpg" id="manoJ1" name="c1" width="79" height ="80">
+                <img src="./Recursos/Interrogante.jpg" id="manoJ2" name="u2" width="79" height ="80">
+                <img src="./Recursos/Interrogante.jpg" id="manoJ3" name="d3" width="79" height ="80">
+            </div>
+    
+            <br></br>
+            <br></br>
+            <br></br>
+    
+            <div class="Jugador1">
+                <p id="puntuacionJ1"></p>
+        
+                <div class="FichaJugador1">
+                    <img src="./Recursos/Jugador1.png" id="personaJ1" name="personaJ1" width="111" height="111">
+                </div>
+        
+                <div class="Jugador2">
+                    <img src="./Recursos/Jugador2.png" id="personaJ2" name="personaJ2" width="111" height="111">
+                </div>
+        
+                <div class="VictoriasJ2">
+                    <p id="puntuacionJ2"></p>
+                </div>
+        
+                <div class="Jugador3">
+                    <img src="./Recursos/Jugador3.png" id="personaJ3" name="personaJ3" width="111" height="111">
+                </div>
+        
+                <div class="VictoriasJ3">
+                    <p id="puntuacionJ3"></p>
+                </div>
+            </div>
+    
+            <br></br>
+            <br></br>
+
+            <div class="Ganador">
+                <p id="Ganador">Ganador: </p>
+            </div>
+
+            <div class="Pista">
+                <button class="Pista" onclick ='Pista();'>Pista</button>
+            </div>
+
+            <div class="SiguientePartida">
+                <button class="siguientePartida" onclick ='SiguientePartida();'>Siguiente Partida</button>
+            </div>
+
+            <div class="Reset">
+                <button class="Reset" onclick ='Reset();'>Reset</button>
             </div>
         </div>
-
-        </br></br>
-
-        <div class="Manos">
-            <img src="./Recursos/Interrogante.jpg" id="manoJ1" name="c1" width="79" height ="80">
-            <img src="./Recursos/Interrogante.jpg" id="manoJ2" name="u2" width="79" height ="80">
-            <img src="./Recursos/Interrogante.jpg" id="manoJ3" name="d3" width="79" height ="80">
-        </div>
-
-        <br></br>
-        <br></br>
-        <br></br>
-
-        <div class="Jugador1">
-            <p id="puntuacionJ1"></p>
-    
-            <div class="FichaJugador1">
-                <img src="./Recursos/Jugador1.png" id="personaJ1" name="personaJ1" width="111" height="111">
-            </div>
-    
-            <div class="Jugador2">
-                <img src="./Recursos/Jugador2.png" id="personaJ2" name="personaJ2" width="111" height="111">
-            </div>
-    
-            <div class="VictoriasJ2">
-                <p id="puntuacionJ2"></p>
-            </div>
-    
-            <div class="Jugador3">
-                <img src="./Recursos/Jugador3.png" id="personaJ3" name="personaJ3" width="111" height="111">
-            </div>
-    
-            <div class="VictoriasJ3">
-                <p id="puntuacionJ3"></p>
-            </div>
-        </div>
-
-        <br></br>
-        <br></br>
-
-        <button class="siguientePartida" onclick ='SiguientePartida();'>Siguiente Partida</button>
     </body>
 </html>
